@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>RWGPS Route Rotator</title>
+		<title>RWGPS Route Rotator.</title>
 		<script>
 			document.addEventListener("DOMContentLoaded", (e) => {
 				const form = document.querySelector("#form");
@@ -10,11 +10,13 @@
 				e.preventDefault();
 				const routeNum = document.querySelector("#routeId").value;
 				const url = `https://script.google.com/macros/s/AKfycbzAGQjSxMiLVf_LvIbGKkfeKi1hoqHSHhxcS-1vbdGiJw0VjdDO/exec?routeNumber=${routeNum}`;
-				window.location = url;
+				const progress = document.querySelector("#progress");
+				progress.innerHtml += "<br>Rotating your route, please wait...";
+				alert(url);
 			}
 		</script>
 		<style>
-			body{font-size: 120%;}
+			body{font-size: 120%;font-family:Arial,Verdana,Swiss,sans-serif;}
 			input{padding: 5px; font-size: 16px; min-width: 10em;}
 			button{padding: 5px 15px; font-size: 16px; margin-left: 1em;}
 		</style>
@@ -23,8 +25,9 @@
 		<h1>RWGPS Route Rotator</h1>
 		<p>Enter your RWGPS route ID below, then press Rotate</p>
 		<form action="#" id="form">
-			<input type="text" name="routeId" id="routeId" autofocus="autofocus" />
+			<input type="number" required="required" name="routeId" id="routeId" autofocus="autofocus" />
 			<button type="submit">Rotate</button>
 		</form>
+		<div id="progress" />
 	</body>
 <html>
