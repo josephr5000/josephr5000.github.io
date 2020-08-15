@@ -2,13 +2,13 @@
 	<head>
 		<title>RWGPS Route Rotator</title>
 		<script>
-			document.addEventListener("load", (event) => {
-				document.querySelector("form").addEventListener('submit', (event) => {
-					const routeNum = document.querySelector("#routeId").value;
-					const url = `https://script.google.com/macros/s/AKfycbzAGQjSxMiLVf_LvIbGKkfeKi1hoqHSHhxcS-1vbdGiJw0VjdDO/exec?routeNumber=${routeNum}`;
-					alert(url);
-				});
-			};
+			const form = document.querySelector("#form");
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const routeNum = document.querySelector("#routeId").value;
+				const url = `https://script.google.com/macros/s/AKfycbzAGQjSxMiLVf_LvIbGKkfeKi1hoqHSHhxcS-1vbdGiJw0VjdDO/exec?routeNumber=${routeNum}`;
+				alert(url);
+			});
 		</script>
 		<style>
 			body{text-size: 120%;}
@@ -17,7 +17,7 @@
 	<body>
 		<h1>RWGPS Route Rotator</h1>
 		<p>Enter your RWGPS route ID below, then press Rotate</p>
-		<form action="#">
+		<form action="#" id="form">
 			<input type="text" name="routeId" id="routeId" autofocus="autofocus" /><br />
 			<input type="submit" value="Rotate" />
 		</form>
