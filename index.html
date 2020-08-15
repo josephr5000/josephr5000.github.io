@@ -11,7 +11,7 @@
 				const routeNum = document.querySelector("#routeId").value;
 				const url = `https://script.google.com/macros/s/AKfycbzAGQjSxMiLVf_LvIbGKkfeKi1hoqHSHhxcS-1vbdGiJw0VjdDO/exec?routeNumber=${routeNum}`;
 				const progress = document.querySelector("#progress");
-				progress.innerHtml += "<br>Rotating your route, please wait...";
+				progress.innerHtml = "Rotating your route, please wait...";
 				alert(url);
 			}
 		</script>
