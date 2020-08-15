@@ -12,6 +12,7 @@
 				const url = `https://script.google.com/macros/s/AKfycbzAGQjSxMiLVf_LvIbGKkfeKi1hoqHSHhxcS-1vbdGiJw0VjdDO/exec?routeNumber=${routeNum}`;
 				const progress = document.querySelector("#progress");
 				progress.innerText = "Rotating your route, please wait...";
+				setInterval(()=>{progress.innerText += ".";}, 5000);
 				window.location = url;
 			}
 		</script>
