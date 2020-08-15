@@ -1,9 +1,18 @@
 <html>
 	<head>
-		<title>Test Github Page</title>
+		<title>RWGPS Route Rotator</title>
+		<script>
+			function doRotate() {
+				alert("hello world");
+			}
+		</script>
 	</head>
 	<body>
-		<h1>Main Page Header</h1>
-		<p>Lorem ipsum, etc...</p>
+		<h1>RWGPS Route Rotator</h1>
+		<p>Enter your RWGPS route ID below, then press Rotate</p>
+		<form action="#" onsubmit="javascript:doRotate()">
+			<input type="text" name="id" id="id" placeholder="enter your route ID here" />
+			<input type="submit" value="Rotate" />
+		</form>
 	</body>
 <html>
